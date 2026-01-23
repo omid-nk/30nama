@@ -5,15 +5,17 @@ import Sidebar from "./Sidebar";
 export default function MainLayout() {
   return (
     <>
-      <aside>
+      <aside className="m-2 mr-0 min-w-36 border p-2">
         <Sidebar />
       </aside>
-      <main>
-        <header>
+      <section className="m-2 flex flex-1 flex-col gap-2">
+        <header className="flex justify-end border p-2">
           <Header />
         </header>
-        <Outlet />
-      </main>
+        <main className="flex justify-center border p-2">
+          <Outlet />
+        </main>
+      </section>
     </>
   );
 }
