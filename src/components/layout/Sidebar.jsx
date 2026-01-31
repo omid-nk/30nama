@@ -11,10 +11,10 @@ function Sidebar() {
   const [sidebar, setSidebar] = useState("menu");
 
   return (
-    <div className="flex w-fit flex-col p-2">
+    <>
       <SidebarHeader sidebar={sidebar} setSidebar={setSidebar} />
 
-      <div className="m-2 flex gap-1">
+      <div className="mr-0 flex">
         <MainNav sidebar={sidebar} setSidebar={setSidebar} />
 
         <AnimatePresence mode="wait">
@@ -37,7 +37,7 @@ function Sidebar() {
           )}
         </AnimatePresence>
       </div>
-    </div>
+    </>
   );
 }
 

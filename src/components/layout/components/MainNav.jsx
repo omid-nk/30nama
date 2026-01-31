@@ -31,7 +31,7 @@ function MainNav({ sidebar, setSidebar }) {
     <section>
       <motion.div
         layout
-        className="flex flex-col items-center gap-8 rounded-3xl p-2"
+        className="flex flex-col items-center gap-8 rounded-3xl p-4"
       >
         <div className="text-white">
           <NavIcon

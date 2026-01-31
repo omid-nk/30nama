@@ -6,3 +6,19 @@
   --color-dark-200: #080808;
   --color-primary: #f84444;
 }
+
+/* Hero slider: responsive, proportional, no overflow */
+.hero-slider-wrapper {
+  contain: layout;
+}
+
+.hero-slider-wrapper .swiper,
+.hero-slider-wrapper .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slider-slide {
+  box-sizing: border-box;
+  height: 100%;
+}
