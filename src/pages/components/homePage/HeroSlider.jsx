@@ -18,6 +18,7 @@ import { SiRottentomatoes, SiMetacritic } from "react-icons/si";
 export default function HeroSlider() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const swiperRef = useRef(null);
 
   return (
     <motion.div
@@ -25,6 +26,8 @@ export default function HeroSlider() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
       className="hero-slider-wrapper relative min-h-160 w-full max-w-full rounded-2xl sm:rounded-3xl"
+      onMouseEnter={() => swiperRef.current?.autoplay?.stop()}
+      onMouseLeave={() => swiperRef.current?.autoplay?.start()}
     >
       <Swiper
         modules={[Navigation, EffectFade, Autoplay]}
@@ -35,6 +38,9 @@ export default function HeroSlider() {
         loop={true}
         autoplay={{ delay: 6000, disableOnInteraction: false }}
         className="h-full w-full"
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
         onBeforeInit={(swiper) => {
           swiper.params.navigation.prevEl = prevRef.current;
           swiper.params.navigation.nextEl = nextRef.current;
@@ -90,24 +96,24 @@ export default function HeroSlider() {
                   transition={{ duration: 0.7, delay: 0.4 }}
                   className="my-6 flex cursor-default flex-wrap gap-2"
                 >
-                  <span className="bg-dark-100 flex items-center gap-2 rounded-2xl py-1 pr-4">
+                  <span className="bg-dark-100 flex items-center gap-2 rounded-2xl pr-4">
                     <img
                       src={logo}
                       alt="Logo"
-                      className="h-10 w-10 rounded-full border-2 object-contain p-2"
+                      className="h-10 w-10 scale-110 rounded-full border-2 object-contain p-2"
                     />
                     {ratings.site}
                   </span>
-                  <span className="bg-dark-100 flex items-center gap-2 rounded-2xl py-1 pr-4">
-                    <SiRottentomatoes className="h-10 w-10 rounded-full border-2 p-2 text-red-500" />
+                  <span className="bg-dark-100 flex items-center gap-2 rounded-2xl pr-4">
+                    <SiRottentomatoes className="h-10 w-10 scale-110 rounded-full border-2 p-2 text-red-500" />
                     {ratings.rt}
                   </span>
-                  <span className="bg-dark-100 flex items-center gap-2 rounded-2xl py-1 pr-4">
-                    <LiaImdb className="h-10 w-10 rounded-full border-2 p-2 text-amber-300" />
+                  <span className="bg-dark-100 flex items-center gap-2 rounded-2xl pr-4">
+                    <LiaImdb className="h-10 w-10 scale-110 rounded-full border-2 p-2 text-amber-300" />
                     {ratings.imdb}
                   </span>
-                  <span className="bg-dark-100 flex items-center gap-2 rounded-2xl py-1 pr-4">
-                    <SiMetacritic className="h-10 w-10 rounded-full border-2 p-2 text-blue-900" />
+                  <span className="bg-dark-100 flex items-center gap-2 rounded-2xl pr-4">
+                    <SiMetacritic className="h-10 w-10 scale-110 rounded-full border-2 p-2 text-blue-900" />
                     {ratings.metacritic}
                   </span>
                 </motion.div>

@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 export default function MainLayout() {
   return (
     <div className="mx-auto mt-2 flex max-w-400 gap-2">
-      <aside className="sticky top-0 flex w-fit flex-col">
+      <aside>
         <Sidebar />
       </aside>
       <div className="flex w-full min-w-0 flex-1 flex-col gap-2.5">

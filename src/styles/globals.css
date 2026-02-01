@@ -22,3 +22,20 @@
   box-sizing: border-box;
   height: 100%;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.no-drag {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* Genres swiper: horizontal pill list */
+.genres-swiper .swiper {
+  overflow: hidden;
+}
+.genres-swiper .swiper-slide {
+  width: auto;
+}
