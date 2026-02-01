@@ -44,17 +44,21 @@ function GenresListElem() {
           speed={300}
           className="min-w-0 flex-1"
         >
-          {genresList.map((item) => (
-            <SwiperSlide key={item.id} className="w-auto!">
-              <a
-                href="#"
-                draggable={false}
-                className="no-drag bg-dark-100/90 hover:border-primary/50 hover:bg-primary/15 block rounded-2xl border border-white/10 px-6 py-3 text-sm font-medium whitespace-nowrap text-white/90 transition-colors hover:text-white"
-              >
-                {item.title}
-              </a>
-            </SwiperSlide>
-          ))}
+          {genresList.map((item) => {
+            const Icon = item.icon;
+            return (
+              <SwiperSlide key={item.id} className="w-auto!">
+                <a
+                  href="#"
+                  draggable={false}
+                  className="no-drag bg-dark-100/90 hover:border-primary/50 hover:bg-primary/15 flex items-center gap-2 rounded-2xl border border-white/10 px-6 py-3 text-sm font-medium whitespace-nowrap text-white/90 transition-colors hover:text-white"
+                >
+                  {Icon && <Icon className="h-5 w-5 shrink-0" />}
+                  {item.title}
+                </a>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
 
         <button
