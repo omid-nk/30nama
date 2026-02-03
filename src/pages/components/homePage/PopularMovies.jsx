@@ -11,12 +11,7 @@ function PopularMovies() {
 
   return (
     <section className="my-4 w-full">
-      <div className="flex items-center justify-between">
-        <h3 className="px-2 text-2xl font-bold text-white">Popular Movies</h3>
-        <p className="cursor-pointer px-2 text-sm text-white/60 transition-colors hover:text-white/80">
-          Watch More ...
-        </p>
-      </div>
+      <h3 className="px-2 text-2xl font-bold text-white">Popular Movies</h3>
       <MovieList movies={movies} />
     </section>
   );

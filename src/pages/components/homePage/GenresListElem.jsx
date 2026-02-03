@@ -44,7 +44,7 @@ function GenresListElem() {
                 <a
                   href="#"
                   draggable={false}
-                  className="no-drag bg-dark-100/90 hover:border-primary/50 hover:bg-primary/15 flex items-center gap-2 rounded-2xl border border-white/10 px-6 py-3 text-sm font-medium whitespace-nowrap text-white/90 transition-colors hover:text-white"
+                  className="no-drag bg-dark-100 hover:border-primary/50 hover:bg-primary/15 flex items-center gap-2 rounded-2xl border border-white/10 px-7 py-3 text-sm font-medium whitespace-nowrap text-white/90 transition-colors hover:text-white"
                 >
                   {Icon && <Icon className="h-5 w-5 shrink-0" />}
                   {item.title}

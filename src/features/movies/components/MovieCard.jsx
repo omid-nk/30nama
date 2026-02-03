@@ -7,9 +7,9 @@ function MovieCard({ movie }) {
 
   return (
     <motion.div
-      initial={{ scale: 1 }}
+      initial={{ scale: 1, boxShadow: "0 8px 8px -12px black" }}
       transition={{ duration: 0.2, ease: "easeInOut" }}
-      whileHover={{ scale: 1.02 }}
+      whileHover={{ scale: 1.02, y: -5, boxShadow: "0 10px 8px -12px black" }}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
       className="relative aspect-2/3 cursor-pointer overflow-hidden rounded-lg"
@@ -20,18 +20,18 @@ function MovieCard({ movie }) {
         className="h-full w-full rounded-lg object-cover"
       />
       <motion.span
-        className="absolute -top-10 -right-32 block w-96 rotate-45 rounded-lg"
+        className="absolute -top-12 -right-32 block w-64 rotate-45 rounded-lg"
         initial={{
           height: "33%",
           backgroundColor: "rgba(255,255,255,0.05)",
           filter: "blur(8px)",
         }}
         animate={{
-          height: isHover ? "50%" : "33%",
+          height: isHover ? "60%" : "40%",
           backgroundColor: isHover
             ? "rgba(255,255,255,0.1)"
             : "rgba(255,255,255,0.05)",
-          filter: isHover ? "blur(12px)" : "blur(2px)",
+          filter: isHover ? "blur(12px)" : "blur(6px)",
         }}
         transition={{ duration: 0.2, ease: "easeOut" }}
       />

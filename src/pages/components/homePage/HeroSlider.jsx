@@ -156,7 +156,7 @@ export default function HeroSlider() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="cursor-pointer rounded-2xl bg-black/70 px-4 py-2 text-white/70 transition-colors hover:text-white"
+                    className="bg-dark-200/60 cursor-pointer rounded-2xl px-4 py-2 text-white/70 transition-colors hover:text-white"
                   >
                     Details
                   </motion.button>
