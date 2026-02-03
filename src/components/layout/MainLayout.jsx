@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { Outlet } from "react-router";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
@@ -12,9 +13,14 @@ export default function MainLayout() {
         <header className="flex h-26 items-center justify-end">
           <Header />
         </header>
-        <main className="flex flex-col items-center gap-2 pr-2">
+        <motion.main
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          className="flex flex-col items-center gap-2 px-2"
+        >
           <Outlet />
-        </main>
+        </motion.main>
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
-import logo from "/public/images/logo-small.png";
+import logo from "/public/images/logo/logo-small.png";
 import { LiaImdb } from "react-icons/lia";
 import { SiRottentomatoes, SiMetacritic } from "react-icons/si";
 
@@ -21,10 +21,7 @@ export default function HeroSlider() {
   const swiperRef = useRef(null);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeInOut" }}
+    <div
       className="hero-slider-wrapper relative min-h-160 w-full max-w-full rounded-2xl sm:rounded-3xl"
       onMouseEnter={() => swiperRef.current?.autoplay?.stop()}
       onMouseLeave={() => swiperRef.current?.autoplay?.start()}
@@ -170,6 +167,6 @@ export default function HeroSlider() {
         )}
         <SwiperNavigation prevRef={prevRef} nextRef={nextRef} />
       </Swiper>
-    </motion.div>
+    </div>
   );
 }

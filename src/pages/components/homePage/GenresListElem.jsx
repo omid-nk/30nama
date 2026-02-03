@@ -1,6 +1,5 @@
 import { useRef } from "react";
 /* eslint-disable-next-line no-unused-vars -- motion.section */
-import { motion } from "motion/react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode } from "swiper/modules";
@@ -13,17 +12,11 @@ function GenresListElem() {
   const swiperRef = useRef(null);
 
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeInOut" }}
-      className="genres-swiper w-full py-2 sm:px-6"
-    >
+    <section className="genres-swiper mb-4 w-full py-2 sm:px-6">
       <div className="flex items-center gap-1">
         <button
           type="button"
           onClick={() => swiperRef.current?.slidePrev()}
-          aria-label="اسکرول به چپ"
           className="bg-dark-100 hover:bg-dark-100/80 z-10 mr-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 text-white/80 transition-colors hover:text-white"
         >
           <HiChevronLeft className="h-6 w-6" />
@@ -64,13 +57,12 @@ function GenresListElem() {
         <button
           type="button"
           onClick={() => swiperRef.current?.slideNext()}
-          aria-label="اسکرول به راست"
           className="bg-dark-100 hover:bg-dark-100/80 z-10 ml-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 text-white/80 transition-colors hover:text-white"
         >
           <HiChevronRight className="h-6 w-6" />
         </button>
       </div>
-    </motion.section>
+    </section>
   );
 }
 

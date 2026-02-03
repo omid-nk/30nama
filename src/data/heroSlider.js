@@ -1,7 +1,7 @@
-import slider1 from "/public/images/heroslider-1.jpg";
-import slider2 from "/public/images/heroslider-2.jpeg";
-import slider3 from "/public/images/heroslider-3.jpg";
-import slider4 from "/public/images/heroslider-4.jpg";
+import slider1 from "/public/images/hero-slider/heroslider-1.jpg";
+import slider2 from "/public/images/hero-slider/heroslider-2.jpeg";
+import slider3 from "/public/images/hero-slider/heroslider-3.jpg";
+import slider4 from "/public/images/hero-slider/heroslider-4.jpg";
 
 const heroSlider = [
   {

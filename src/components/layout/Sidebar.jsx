@@ -11,7 +11,7 @@ function Sidebar() {
   const [sidebar, setSidebar] = useState("menu");
 
   return (
-    <div className="sticky top-0 z-50 flex w-fit flex-col">
+    <div className="sticky top-2 z-50 flex w-fit flex-col">
       <SidebarHeader sidebar={sidebar} setSidebar={setSidebar} />
 
       <div className="mr-0 flex">

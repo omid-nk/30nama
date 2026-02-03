@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
-import logo from "/public/images/logo-small.png";
+import logo from "/public/images/logo/logo-small.png";
 
 function SidebarHeader({ sidebar, setSidebar }) {
   const showTitle = sidebar !== "watch" && sidebar !== "setting";
