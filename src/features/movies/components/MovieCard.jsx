@@ -7,9 +7,9 @@ function MovieCard({ movie }) {
 
   return (
     <motion.div
-      initial={{ scale: 1, boxShadow: "0 8px 8px -12px black" }}
+      initial={{ scale: 1, boxShadow: "0 12px 8px -8px black" }}
       transition={{ duration: 0.2, ease: "easeInOut" }}
-      whileHover={{ scale: 1.02, y: -5, boxShadow: "0 10px 8px -12px black" }}
+      whileHover={{ scale: 1.02, y: -5, boxShadow: "0 14px 8px -8px black" }}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
       className="relative aspect-2/3 cursor-pointer overflow-hidden rounded-lg"

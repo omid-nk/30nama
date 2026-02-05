@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { HiInbox, HiMiniArchiveBox } from "react-icons/hi2";
 import {
   RiEarthFill,
@@ -32,23 +33,27 @@ function DiscoverNav() {
       >
         <h3 className="mb-2 cursor-default text-sm text-white/20">DISCOVER</h3>
 
-        <motion.span
-          variants={item}
-          whileHover={{ x: 6 }}
-          className="text-md flex cursor-pointer items-center gap-2 text-white/60 hover:text-white"
-        >
-          <HiInbox />
-          Categories
-        </motion.span>
+        <Link to={"/categories"}>
+          <motion.span
+            variants={item}
+            whileHover={{ x: 6 }}
+            className="text-md flex cursor-pointer items-center gap-2 text-white/60 hover:text-white"
+          >
+            <HiInbox />
+            Categories
+          </motion.span>
+        </Link>
 
-        <motion.span
-          variants={item}
-          whileHover={{ x: 6 }}
-          className="text-md flex cursor-pointer items-center gap-2 text-white/60 hover:text-white"
-        >
-          <HiMiniArchiveBox />
-          Genres
-        </motion.span>
+        <Link to={"/genres"}>
+          <motion.span
+            variants={item}
+            whileHover={{ x: 6 }}
+            className="text-md flex cursor-pointer items-center gap-2 text-white/60 hover:text-white"
+          >
+            <HiMiniArchiveBox />
+            Genres
+          </motion.span>
+        </Link>
       </motion.div>
 
       <motion.div

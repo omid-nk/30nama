@@ -5,6 +5,7 @@ import {
   HiMiniMagnifyingGlass,
   HiMiniFunnel,
 } from "react-icons/hi2";
+import { Link } from "react-router";
 
 const container = {
   hidden: {},
@@ -31,23 +32,27 @@ function MenuNav() {
       >
         <h3 className="mb-2 cursor-default text-sm text-white/20">MENU</h3>
 
-        <motion.span
-          variants={item}
-          whileHover={{ x: 6 }}
-          className="text-md flex cursor-pointer items-center gap-2 text-white/60 hover:text-white"
-        >
-          <HiMiniHome />
-          30nama
-        </motion.span>
+        <Link to={"/"}>
+          <motion.span
+            variants={item}
+            whileHover={{ x: 6 }}
+            className="text-md flex cursor-pointer items-center gap-2 text-white/60 hover:text-white"
+          >
+            <HiMiniHome />
+            30nama
+          </motion.span>
+        </Link>
 
-        <motion.span
-          variants={item}
-          whileHover={{ x: 6 }}
-          className="text-md flex cursor-pointer items-center gap-2 text-white/60 hover:text-white"
-        >
-          <HiMiniTv />
-          Watch Now
-        </motion.span>
+        <Link to={"/watch-now"}>
+          <motion.span
+            variants={item}
+            whileHover={{ x: 6 }}
+            className="text-md flex cursor-pointer items-center gap-2 text-white/60 hover:text-white"
+          >
+            <HiMiniTv />
+            Watch Now
+          </motion.span>
+        </Link>
       </motion.div>
 
       <motion.div
@@ -58,23 +63,16 @@ function MenuNav() {
       >
         <h3 className="mb-2 cursor-default text-sm text-white/20">SEARCH</h3>
 
-        <motion.span
-          variants={item}
-          whileHover={{ x: 6 }}
-          className="text-md flex cursor-pointer items-center gap-2 text-white/60 hover:text-white"
-        >
-          <HiMiniMagnifyingGlass />
-          Precise Search
-        </motion.span>
-
-        <motion.span
-          variants={item}
-          whileHover={{ x: 6 }}
-          className="text-md flex cursor-pointer items-center gap-2 text-white/60 hover:text-white"
-        >
-          <HiMiniFunnel />
-          Advanced Search
-        </motion.span>
+        <Link to={"/search"}>
+          <motion.span
+            variants={item}
+            whileHover={{ x: 6 }}
+            className="text-md flex cursor-pointer items-center gap-2 text-white/60 hover:text-white"
+          >
+            <HiMiniFunnel />
+            Advanced Search
+          </motion.span>
+        </Link>
       </motion.div>
     </>
   );

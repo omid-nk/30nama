@@ -6,6 +6,7 @@ import {
   HiUser,
   HiCog6Tooth,
 } from "react-icons/hi2";
+import { Link } from "react-router";
 
 const iconVariants = {
   inactive: { scale: 1, opacity: 0.6 },
@@ -48,12 +49,14 @@ function MainNav({ sidebar, setSidebar }) {
             <HiRectangleStack className="h-6 w-6" />
           </NavIcon>
 
-          <NavIcon
-            active={sidebar === "watch"}
-            onClick={() => setSidebar("watch")}
-          >
-            <HiPlay className="h-6 w-6" />
-          </NavIcon>
+          <Link to={"/watch/type/id"}>
+            <NavIcon
+              active={sidebar === "watch"}
+              onClick={() => setSidebar("watch")}
+            >
+              <HiPlay className="h-6 w-6" />
+            </NavIcon>
+          </Link>
         </div>
 
         <div className="text-white">
