@@ -2,7 +2,6 @@ import { RiMovie2Line, RiMovieLine, RiAwardLine } from "react-icons/ri";
 import { MdAnimation } from "react-icons/md";
 import { BiMovie } from "react-icons/bi";
 import { PiFlowerLotus } from "react-icons/pi";
-import { FiAirplay } from "react-icons/fi";
 
 const categoriesList = [
   { id: 1, icon: RiMovie2Line, title: "Movies" },
