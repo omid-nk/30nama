@@ -8,9 +8,9 @@ function Categories() {
         {categoriesList.map((item) => {
           const Icon = item.icon;
           return (
-            <div className="bg-dark-100 border-dark-100 hover:border-primary group flex h-40 min-w-60 cursor-pointer flex-col items-center justify-center gap-2 rounded-3xl border transition-colors">
+            <div className="bg-dark-100 border-dark-100 hover:border-primary hover:bg-primary/10 group flex h-40 min-w-60 cursor-pointer flex-col items-center justify-center gap-2 rounded-3xl border transition-all">
               {Icon && (
-                <Icon className="group-hover:text-primary mb-2 h-8 w-8 text-white/50 transition-colors sm:h-10 sm:w-10" />
+                <Icon className="mb-2 h-8 w-8 text-white/50 transition-all group-hover:text-white sm:h-10 sm:w-10" />
               )}
               <p className="text-center text-sm">{item.title}</p>
             </div>
