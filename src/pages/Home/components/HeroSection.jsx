@@ -42,20 +42,15 @@ function HeroSection() {
           }) => (
             <SwiperSlide
               key={id}
-              className="relative flex items-center justify-center px-2 py-22 md:px-6"
+              className="relative flex items-center justify-center px-2 py-22 md:px-5"
               style={{
                 backgroundImage: `url(${image || "/fallback.jpg"})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             >
-              {/* Gradient overlays */}
-              <span className="from-dark-2/90 xl:from-dark-2 pointer-events-none absolute inset-y-0 left-0 z-10 w-[60%] bg-linear-to-r to-transparent" />
-              <span className="from-dark-2/90 xl:from-dark-2 pointer-events-none absolute inset-y-0 right-0 z-10 w-[6%] bg-linear-to-l to-transparent" />
-              <span className="from-dark-2 pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[18%] bg-linear-to-t to-transparent" />
-
               {/* Content */}
-              <div className="bg-dark-3/60 relative z-20 my-auto flex w-fit max-w-4xl flex-col gap-4 rounded-2xl p-4 sm:p-6 md:bg-transparent">
+              <div className="bg-dark-3/50 relative z-20 my-auto flex w-fit max-w-4xl flex-col gap-4 rounded-2xl p-4 backdrop-blur-xs sm:p-8">
                 <motion.h3
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}

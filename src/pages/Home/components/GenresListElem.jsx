@@ -12,7 +12,7 @@ function GenresListElem() {
   const swiperRef = useRef(null);
 
   return (
-    <section className="genres-swiper mb-4 w-full p-2 sm:px-6">
+    <section className="genres-swiper mt-4 mb-4 w-full p-2 sm:px-6">
       <div className="flex items-center gap-1">
         <button
           type="button"
