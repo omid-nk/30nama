@@ -19,7 +19,7 @@ function CategoryPage({ fetchFunction, title }) {
   };
 
   return (
-    <div className="mt-32 min-h-screen p-6 text-white">
+    <div className="mt-6 min-h-screen p-6 text-white">
       <h1 className="mb-8 text-2xl font-bold">{title}</h1>
 
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">

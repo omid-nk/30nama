@@ -2,12 +2,10 @@ import React from "react";
 
 function About() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div>
       {/* Hero Header */}
-      <div className="relative flex h-60 w-full items-center justify-center bg-linear-to-l from-red-700 via-red-900 to-black md:h-96">
-        <h1 className="text-3xl font-bold text-white md:text-5xl">
-          About This Project
-        </h1>
+      <div className="relative flex h-60 w-full items-center justify-center md:h-96">
+        <h1 className="text-3xl font-bold md:text-5xl">About This Project</h1>
       </div>
 
       {/* Content */}

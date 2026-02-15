@@ -42,7 +42,7 @@ function HeroSection() {
           }) => (
             <SwiperSlide
               key={id}
-              className="relative flex items-center justify-center px-2 py-22 md:px-5"
+              className="relative flex items-center justify-center px-2 py-22 md:px-5 xl:rounded-3xl"
               style={{
                 backgroundImage: `url(${image || "/fallback.jpg"})`,
                 backgroundSize: "cover",

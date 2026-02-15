@@ -50,9 +50,9 @@ function MovieDetails() {
     : null;
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="bg-dark-2 min-h-screen text-white">
       {/* Backdrop */}
-      <div className="relative h-[70vh] w-full overflow-hidden">
+      <div className="relative h-142 w-full overflow-hidden object-center xl:rounded-t-3xl">
         {backdropUrl ? (
           <img
             src={backdropUrl}
@@ -60,22 +60,18 @@ function MovieDetails() {
             className="absolute inset-0 h-full w-full object-cover"
           />
         ) : (
-          <div className="absolute inset-0 bg-gray-900" />
+          <div className="bg-dark-3 absolute inset-0" />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent" />
+        <div className="from-dark-2 via-dark-2/70 absolute inset-0 bg-linear-to-t to-transparent" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 -mt-40 flex flex-col gap-10 px-6 pb-16 md:flex-row md:px-16">
         {/* Poster */}
         {posterUrl ? (
-          <img
-            src={posterUrl}
-            alt={movie.title}
-            className="w-60 rounded-lg shadow-2xl"
-          />
+          <img src={posterUrl} alt={movie.title} className="w-60 rounded-lg" />
         ) : (
-          <div className="h-[360px] w-60 rounded-lg bg-gray-800" />
+          <div className="bg-dark-3 h-90 w-60 rounded-lg" />
         )}
 
         {/* Info */}
