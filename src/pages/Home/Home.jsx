@@ -12,7 +12,7 @@ function Home() {
       <MovieList
         title="Most Popular"
         fetchFunction={getMostPopularMovies}
-        viewAllPath="/movies/popular"
+        viewAllPath="/movies/"
       />
     </>
   );

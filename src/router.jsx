@@ -6,16 +6,11 @@ import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
 import CategoryPage from "./pages/CategoryPage/CategoryPage";
 
-import {
-  getNewestMovies,
-  getMostPopularMovies,
-  getLatestMovies,
-  getLatestSeries,
-  getLatestAnimations,
-} from "./services/tmdbApi";
+import { getMostPopularMovies } from "./services/tmdbApi";
 
 import MovieDetails from "./pages/MovieDetails/MovieDetails";
 import About from "./pages/About/About";
+import Forum from "./pages/Forum/Forum";
 
 const router = createBrowserRouter([
   {
@@ -27,13 +22,7 @@ const router = createBrowserRouter([
 
       // Movies
       {
-        path: "movies/newest",
-        element: (
-          <CategoryPage title="Newest Movies" fetchFunction={getNewestMovies} />
-        ),
-      },
-      {
-        path: "movies/popular",
+        path: "movies",
         element: (
           <CategoryPage
             title="Most Popular Movies"
@@ -42,37 +31,11 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "movies/latest",
-        element: (
-          <CategoryPage title="Latest Movies" fetchFunction={getLatestMovies} />
-        ),
-      },
-
-      // TV
-      {
-        path: "tv/latest",
-        element: (
-          <CategoryPage title="Latest Series" fetchFunction={getLatestSeries} />
-        ),
-      },
-
-      // Animations
-      {
-        path: "animations",
-        element: (
-          <CategoryPage
-            title="Latest Animations"
-            fetchFunction={getLatestAnimations}
-          />
-        ),
-      },
-
-      {
-        path: "movie/:id",
+        path: "movies/:id",
         element: <MovieDetails />,
       },
-
       { path: "/about", element: <About /> },
+      { path: "/forum", element: <Forum /> },
       // 404
       { path: "*", element: <NotFound /> },
     ],

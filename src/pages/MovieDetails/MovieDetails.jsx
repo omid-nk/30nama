@@ -31,13 +31,13 @@ function MovieDetails() {
 
   if (loading)
     return (
-      <div className="flex min-h-screen items-center justify-center bg-black text-white">
+      <div className="flex min-h-screen items-center justify-center text-white">
         Loading...
       </div>
     );
   if (!movie)
     return (
-      <div className="flex min-h-screen items-center justify-center bg-black text-white">
+      <div className="flex min-h-screen items-center justify-center text-white">
         Movie not found
       </div>
     );
